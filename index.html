@@ -4,25 +4,134 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
-  <title>Frontend Mentor | QR code component</title>
+  <title>Frontend Mentor | Blog preview card</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    :root{
+      --main-theme: hsl(47, 88%, 63%);
+      --grey-950: hsl(0, 0%, 7%);
+      --grey-500: hsl(0, 0%, 42%);
+    }
+
+    body{
+      font-family: "Figtree", sans-serif;
+      font-size: 0.75rem;
+      margin: 0;
+    }
+
+    .container{
+      background-color: var(--main-theme);
+      display: flex;
+      height: 100vh;
+      padding: 20px 10px;
+    }
+
+    /* box-shadow: offset-x offset-y shadow-blur shadow-width color */
+    .card-wrapper{
+      background-color: white;
+      border: 1px solid black;
+      border-radius: 15px;
+      box-shadow: 5px 4px 0 2px rgb(0, 0, 0, 1); 
+      margin: auto;
+      padding: 15px;
+      width: 250px;
+    }
+
+    .card-image{
+      border-radius: 15px;
+      width: 100%;
+    }
+
+    .card-tags{
+      display: flex;
+      gap: 5px;
+    }
+
+    .card-tags span{
+      background-color: var(--main-theme);
+      border-radius: 5px;
+      font-weight: 700;
+      padding: 5px;
+    }
+
+    .card-wrapper > div{
+      margin-top: 15px;
+    }
+
+    .card-metadata{
+      color: var(--grey-950);
+    }
+
+    .card-title{
+      color: var(--main-theme);
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .card-description{
+      color: var(--grey-500);
+    }
+
+    .card-author{
+      align-items: center;
+      display: flex;
+      gap: 15px;
+    }
+
+    .card-author img{
+      width: 13%;
+    }
+
+    .card-author-name{
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    @media screen and (max-width: 375px) {
+      
+    }
   </style>
 </head>
 <body>
+  <div class="container">
+    <div class="card-wrapper">
+      <img class="card-image" src="assets/images/blog-preview-main-image.png" alt="main image"/>
+      <div class="card-tags">
+        <span>Learning</span>
+      </div>
+      <div class="card-metadata">Published 21 Dec 2023</div>
+      <div class="card-title">HTML & CSS foundations</div>
+      <div class="card-description">These language are the backbone of every websites, defining structure, content, and presentation.</div>
+      <div class="card-author">
+        <img src="assets/images/image-avatar.webp" alt="avatar" />
+        <span class="card-author-name">Greg Hooper</span>
+      </div>
+    </div>
+  </div>
+<!--
+  Learning
 
-  Improve your front-end skills by building projects
+  Published 21 Dec 2023
 
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
+  HTML & CSS foundations
+
+  These languages are the backbone of every website, defining structure, content, and presentation.
+
+  Greg Hooper
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  -->
 </body>
 </html>
